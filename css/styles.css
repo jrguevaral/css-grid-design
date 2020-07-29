@@ -3,7 +3,11 @@ body {
 }
 .container{
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+/*     grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 150px 150px; */
+    grid-template: 150px 150px 100px / 25% 50% 25%;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
 }
 
 .item{
@@ -11,4 +15,17 @@ body {
     padding: 18px;
     border: 1px solid red;
     text-align: center;
+}
+
+.item:nth-of-type(4) {
+    background: blue;
+    /* overflow: auto; */
+    /* display: subgrid; */
+    /* display: inline-grid; */
+    display: grid;
+    grid-template: 50px 50px 50px / 50px 50px 50px;
+}
+
+.item .item {
+    background: yellow;
 }
